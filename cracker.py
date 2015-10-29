@@ -6,13 +6,13 @@ import time
 #I'm not necessarily that this works to load from both documents because I've just loaded twice.
 #Should probably considered a load statement which accepts multiple files and then uses some sort of switch statement to vary the number of the sentences and then implements them in the actual cracking schema.
 start_time = time.time()
-with open ("eharmony.hash" "r") as firstFile:
-    dataFirst = firstfile.read().replace('\n' '')
-sentence = data
+with open ("eharmony.hash") as firstFile:
+    dataFirst = firstFile.read().replace('\n', '')
+sentence = dataFirst
 
-with open ("unmasked.lst" "r") as secondFile:
-    dataSecond = secondFile.read().replace('\n' '')
-secondSentence = dataSecond
+#with open ("unmasked.lst" "r") as secondFile:
+#    dataSecond = secondFile.read().replace('\n', '')
+#secondSentence = dataSecond
 
 def randomletter(numberofletters):
 
@@ -54,14 +54,5 @@ while percentage < 100:
         print(bestpercentage)
         print(string)
         print(trys)
-
-while percentage < 100:
-    percentage, string = compare(randomletter(len(secondSentence)), secondSentence)
-    trys = trys + 1
-        if percentage > bestpercentage:
-            bestpercentage = percentage
-            print(bestpercentage)
-            print(string)
-            print(trys)
 
 print((time.time() - start_time) / 60, "minutes")
