@@ -17,9 +17,9 @@ sentence = dataFirst
 def randomletter(numberofletters):
 
     # Takes a int and will retruns a list
-    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
+    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
                'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
-               'w', 'x', 'y', 'z', ' ']
+               'w', 'x', 'y', 'z', ' ', '`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '{', '}', '[',']', '\', '|', ':', ';', '"', ''', '<', '>', ',',  '.', '?', '/']
     listofletters = []
     index = numberofletters
     while index != 0:
@@ -38,8 +38,8 @@ def compare(alist, astr):
         if ch == astr[index]:
             matches = matches + 1
         index = index + 1
-    letters = float(len(astr))
-    percentage = matches / letters * 100
+    alphabet = float(len(astr))
+    percentage = matches / alphabet * 100
     return (percentage, listtostr)
 
 
