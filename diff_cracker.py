@@ -7,15 +7,15 @@ import time
 #Should probably considered a load statement which accepts multiple files and then uses some sort of switch statement to vary the number of the sentences and then implements them in the actual cracking schema.
 
 start_time = time.time()
-with open ("eharmony.hash") as File:
-    data = File.read().replace('\n', '')
-sentence = data
+with ("password") as firstFile:
+    dataFirst = firstFile.replace('\n', '')
+sentence = dataFirst
 
 #with open ("unmasked.lst" "r") as secondFile:
 #    dataSecond = secondFile.read().replace('\n', '')
 #secondSentence = dataSecond
 
-def randomletter(numberofletters):
+def changeletter(numberofletters):
     #For some reason our full alphabet cypher still does not work.
     #Takes a int and will retruns a list
     alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
@@ -24,7 +24,7 @@ def randomletter(numberofletters):
     listofletters = []
     index = numberofletters
     while index != 0:
-        listofletters.append(letters[random.randint(0, 26)])
+        listofletters.append(letters[random.randint(0, 59)])
         index = index - 1
     return listofletters
 
@@ -47,7 +47,7 @@ percentage = 0
 bestpercentage = 0
 trys = 0
 while percentage < 100:
-    percentage, string = compare(randomletter(len(sentence)), sentence)
+    percentage, string = compare(changeletter(len(sentence)), sentence)
     trys = trys + 1
     if percentage > bestpercentage:
         bestpercentage = percentage
