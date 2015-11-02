@@ -7,9 +7,7 @@ import time
 #Should probably considered a load statement which accepts multiple files and then uses some sort of switch statement to vary the number of the sentences and then implements them in the actual cracking schema.
 
 start_time = time.time()
-with ('python') as File:
-    data = File
-sentence = data
+sentence = "testcase"
 
 #with open ("unmasked.lst" "r") as secondFile:
 #    dataSecond = secondFile.read().replace('\n', '')
@@ -24,7 +22,7 @@ def changeletter(numberofletters):
     listofletters = []
     index = numberofletters
     while index != 0:
-        listofletters.append(letters[random.randint(0, 59)])
+        listofletters.append(letters[random.randint(0, 26)])
         index = index - 1
     return listofletters
 
