@@ -7,7 +7,7 @@ import time
 #Should probably considered a load statement which accepts multiple files and then uses some sort of switch statement to vary the number of the sentences and then implements them in the actual cracking schema.
 
 start_time = time.time()
-sentence = "testcasepart2"
+sentence = "stringtest"
 
 #with open ("unmasked.lst" "r") as secondFile:
 #    dataSecond = secondFile.read().replace('\n', '')
